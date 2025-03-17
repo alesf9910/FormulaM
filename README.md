@@ -23,7 +23,7 @@
   - `ieeeremainder`, and `truncate`
 
 - **Variables and Constants:**  
-  Variables are assigned using the syntax `ID = formula`. Constants like `pi`, `e`, and `tau` are predefined and cannot be changed.
+  Variables are assigned using the syntax `(ID = formula)`. Constants like `pi`, `e`, and `tau` are predefined.
 
 - **Custom Functions:**  
   You can add your own functions by inserting entries into the static `functions` dictionary of the `Calculator` class.
@@ -158,7 +158,7 @@ For questions, suggestions, or contributions, please open an issue on GitHub or 
   - `ieeeremainder`, `truncate`
 
 - **Variables y Constantes:**  
-  Las variables se asignan con la sintaxis `ID = fórmula`. Las constantes `pi`, `e` y `tau` se inicializan por defecto y no se pueden modificar.
+  Las variables se asignan con la sintaxis `(ID = fórmula)`. Las constantes `pi`, `e` y `tau` se inicializan por defecto.
 
 - **Funciones Personalizadas:**  
   Puedes agregar funciones propias insertando entradas en el diccionario estático `functions` de la clase `Calculator`.
