@@ -16,12 +16,7 @@ public class Calculator
     public double this[string key]
     {
         get => variables[firm][key];
-        set {
-            if (key == "pi" || key == "e" || key == "tau") {
-                throw new CalculatorException($"The constant {key} cannot be changed.");
-            }
-            variables[firm][key] = value;
-        }
+        set => variables[firm][key] = value;
     }
 
     public static Dictionary<string, Func<double[], double>> functions = new Dictionary<string, Func<double[], double>>()
