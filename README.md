@@ -114,7 +114,7 @@ public class Program
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/alesf9910/FormulaM.git
    ```
 
 2. **Open the Project:**  
