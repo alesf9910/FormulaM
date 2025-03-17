@@ -1,6 +1,4 @@
-# Formula Calculator / Calculadora de F髍mulas
-
-Este repositorio contiene una biblioteca en C# que permite evaluar expresiones matem醫icas basadas en una gram醫ica definida. La biblioteca soporta operaciones aritm閠icas, funciones integradas, asignaci髇 de variables y la definici髇 de funciones personalizadas. Adem醩, cuenta con un robusto manejo de errores mediante la excepci髇 `CalculatorException`.
+# Formula Calculator / Calculadora de F贸rmulas
 
 ---
 
@@ -114,7 +112,7 @@ public class Program
 
 #### Error Handling
 
-When an error occurs梥uch as a syntax error, a wrong number of parameters in a function, or attempting to modify constants梩he library throws a `CalculatorException`. For example:
+When an error occurs鈥攕uch as a syntax error, a wrong number of parameters in a function, or attempting to modify constants鈥攖he library throws a `CalculatorException`. For example:
 
 ```csharp
 try
@@ -157,16 +155,16 @@ For questions, suggestions, or contributions, please open an issue on GitHub or 
 
 ---
 
-## Espa駉l
+## Espa帽ol
 
-### Introducci髇
+### Introducci贸n
 
-**Calculadora de F髍mulas** es una librer韆 en C# dise馻da para evaluar expresiones matem醫icas basadas en una gram醫ica definida. Soporta operaciones aritm閠icas, funciones integradas, asignaci髇 de variables y la definici髇 de funciones personalizadas. El manejo de errores se implementa a trav閟 de la excepci髇 personalizada `CalculatorException`.
+**Calculadora de F贸rmulas** es una librer铆a en C# dise帽ada para evaluar expresiones matem谩ticas basadas en una gram谩tica definida. Soporta operaciones aritm茅ticas, funciones integradas, asignaci贸n de variables y la definici贸n de funciones personalizadas. El manejo de errores se implementa a trav茅s de la excepci贸n personalizada `CalculatorException`.
 
-### Caracter韘ticas
+### Caracter铆sticas
 
-- **Operaciones Aritm閠icas:**  
-  Soporta suma (`+`), resta (`-`), multiplicaci髇 (`*`), divisi髇 (tanto `/` como `//`), resto (`%`) y potenciaci髇 (`^`).
+- **Operaciones Aritm茅ticas:**  
+  Soporta suma (`+`), resta (`-`), multiplicaci贸n (`*`), divisi贸n (tanto `/` como `//`), resto (`%`) y potenciaci贸n (`^`).
 
 - **Funciones Integradas:**  
   Incluye funciones como:
@@ -178,19 +176,19 @@ For questions, suggestions, or contributions, please open an issue on GitHub or 
   - `ieeeremainder`, `truncate`
 
 - **Variables y Constantes:**  
-  Las variables se asignan con la sintaxis `ID = f髍mula`. Las constantes `pi`, `e` y `tau` se inicializan por defecto y no se pueden modificar.
+  Las variables se asignan con la sintaxis `ID = f贸rmula`. Las constantes `pi`, `e` y `tau` se inicializan por defecto y no se pueden modificar.
 
 - **Funciones Personalizadas:**  
-  Puedes agregar funciones propias insertando entradas en el diccionario est醫ico `functions` de la clase `Calculator`.
+  Puedes agregar funciones propias insertando entradas en el diccionario est谩tico `functions` de la clase `Calculator`.
 
 - **Manejo de Errores:**  
-  Los errores de sintaxis, el n鷐ero incorrecto de par醡etros o el intento de modificar constantes disparan una `CalculatorException` con un mensaje claro.
+  Los errores de sintaxis, el n煤mero incorrecto de par谩metros o el intento de modificar constantes disparan una `CalculatorException` con un mensaje claro.
 
 ### Uso y Ejemplos
 
-#### Evaluaci髇 de Expresiones B醩icas
+#### Evaluaci贸n de Expresiones B谩sicas
 
-Crea una instancia de `Calculator` y utiliza el m閠odo `Calculate()` para evaluar la expresi髇:
+Crea una instancia de `Calculator` y utiliza el m茅todo `Calculate()` para evaluar la expresi贸n:
 
 ```csharp
 using System;
@@ -202,13 +200,13 @@ public class Program
     {
         try 
         {
-            // Evaluaci髇 aritm閠ica simple:
+            // Evaluaci贸n aritm茅tica simple:
             Calculator calc = new Calculator("2+3");
             double resultado = calc.Calculate();
             Console.WriteLine("2+3 = " + resultado);
 
-            // Asignaci髇 de variable:
-            // Escribe la asignaci髇 entre par閚tesis y a continuaci髇 la expresi髇 a evaluar.
+            // Asignaci贸n de variable:
+            // Escribe la asignaci贸n entre par茅ntesis y a continuaci贸n la expresi贸n a evaluar.
             Calculator calc2 = new Calculator("(x=5) 2*x+3");
             double resultado2 = calc2.Calculate();
             Console.WriteLine("(x=5) 2*x+3 = " + resultado2);
@@ -223,7 +221,7 @@ public class Program
 
 #### Definiendo Funciones Personalizadas
 
-Puedes agregar tus propias funciones a馻di閚dolas al diccionario `functions`. Por ejemplo, para definir una funci髇 que sume dos n鷐eros:
+Puedes agregar tus propias funciones a帽adi茅ndolas al diccionario `functions`. Por ejemplo, para definir una funci贸n que sume dos n煤meros:
 
 ```csharp
 using System;
@@ -233,10 +231,10 @@ public class FuncionesPersonalizadas
 {
     public static void Registrar()
     {
-        // Define la funci髇 "sumaPersonal" que devuelve la suma de dos par醡etros.
+        // Define la funci贸n "sumaPersonal" que devuelve la suma de dos par谩metros.
         Calculator.functions.Add("sumaPersonal", parameters =>
         {
-            // Aseg鷕ate de que se reciben exactamente 2 par醡etros.
+            // Aseg煤rate de que se reciben exactamente 2 par谩metros.
             Calculator.ExpectParameters("sumaPersonal", parameters, 2);
             return parameters[0] + parameters[1];
         });
@@ -249,10 +247,10 @@ public class Program
     {
         try 
         {
-            // Registra la funci髇 personalizada antes de usarla.
+            // Registra la funci贸n personalizada antes de usarla.
             FuncionesPersonalizadas.Registrar();
 
-            // Ahora, eval鷄 una expresi髇 usando la funci髇 personalizada:
+            // Ahora, eval煤a una expresi贸n usando la funci贸n personalizada:
             Calculator calc = new Calculator("sumaPersonal(10,20)");
             double resultado = calc.Calculate();
             Console.WriteLine("sumaPersonal(10,20) = " + resultado);
@@ -267,7 +265,7 @@ public class Program
 
 #### Manejo de Errores
 
-Cuando ocurre un error梡or ejemplo, una expresi髇 con sintaxis incorrecta, una llamada a una funci髇 con un n鷐ero inadecuado de par醡etros o el intento de modificar constantes梥e lanza un `CalculatorException`. Ejemplo:
+Cuando ocurre un error鈥攑or ejemplo, una expresi贸n con sintaxis incorrecta, una llamada a una funci贸n con un n煤mero inadecuado de par谩metros o el intento de modificar constantes鈥攕e lanza un `CalculatorException`. Ejemplo:
 
 ```csharp
 try
@@ -282,7 +280,7 @@ catch (CalculatorException e)
 }
 ```
 
-### Instalaci髇
+### Instalaci贸n
 
 1. **Clona el repositorio:**
 
@@ -291,22 +289,22 @@ catch (CalculatorException e)
    ```
 
 2. **Abre el proyecto:**  
-   Importa el proyecto en tu IDE favorito (Visual Studio, VS Code, etc.) y aseg鷕ate de tener instalada la versi髇 adecuada de .NET (por ejemplo, .NET 6.0).
+   Importa el proyecto en tu IDE favorito (Visual Studio, VS Code, etc.) y aseg煤rate de tener instalada la versi贸n adecuada de .NET (por ejemplo, .NET 6.0).
 
 3. **Compila y Ejecuta:**  
-   Compila el proyecto y ejecuta el c骴igo de ejemplo o integra la librer韆 en tu propio proyecto.
+   Compila el proyecto y ejecuta el c贸digo de ejemplo o integra la librer铆a en tu propio proyecto.
 
 ### Contribuciones
 
-as contribuciones son bienvenidas! Si encuentras alg鷑 problema o deseas mejorar la funcionalidad, por favor abre un *issue* o env韆 un *pull request*.
+隆Las contribuciones son bienvenidas! Si encuentras alg煤n problema o deseas mejorar la funcionalidad, por favor abre un *issue* o env铆a un *pull request*.
 
 ### Licencia
 
-Este proyecto se distribuye bajo la Licencia MIT. Revisa el archivo `LICENSE` para m醩 detalles.
+Este proyecto se distribuye bajo la Licencia MIT. Revisa el archivo `LICENSE` para m谩s detalles.
 
 ### Contacto
 
-Para dudas, sugerencias o comentarios, abre un *issue* en GitHub o cont醕tanos directamente.
+Para dudas, sugerencias o comentarios, abre un *issue* en GitHub o cont谩ctanos directamente.
 
 ---
 
