@@ -109,24 +109,6 @@ public class Program
     }
 }
 ```
-
-#### Error Handling
-
-When an error occurs—such as a syntax error, a wrong number of parameters in a function, or attempting to modify constants—the library throws a `CalculatorException`. For example:
-
-```csharp
-try
-{
-    // Attempting to modify a constant will throw an exception.
-    Calculator calc = new Calculator("pi=3.14");
-    calc.Calculate();
-}
-catch (CalculatorException e)
-{
-    Console.WriteLine("Error: " + e.Message);
-}
-```
-
 ### Installation
 
 1. **Clone the Repository:**
@@ -262,24 +244,6 @@ public class Program
     }
 }
 ```
-
-#### Manejo de Errores
-
-Cuando ocurre un error—por ejemplo, una expresión con sintaxis incorrecta, una llamada a una función con un número inadecuado de parámetros o el intento de modificar constantes—se lanza un `CalculatorException`. Ejemplo:
-
-```csharp
-try
-{
-    // Intentar modificar una constante produce un error:
-    Calculator calc = new Calculator("pi=3.14");
-    calc.Calculate();
-}
-catch (CalculatorException e)
-{
-    Console.WriteLine("Error: " + e.Message);
-}
-```
-
 ### Instalación
 
 1. **Clona el repositorio:**
